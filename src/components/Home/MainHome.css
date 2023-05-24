@@ -1,4 +1,4 @@
-  main .Home{
+  .Home{
   margin: 50px 0;
   background: url("//src/image/fon.jpg") no-repeat;
   width: 100%;
@@ -7,6 +7,27 @@
   background-position: center center;
   background-blend-mode: multiply;
   background-color: #bcbcbc;
+ }
+ .Home ::after{
+  content: "All the best for you";
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  width: 300px;
+  font-size: 40px;
+  font-weight: 600;
+  color:#bcbcbc;
+ }
+
+ .Home ::before{
+  content: "at low prices";
+  position: absolute;
+  top: 250px;
+  left: 50px;
+  width: 300px;
+  font-size: 15px;
+  font-weight: 300;
+  color:#bcbcbc;
  }
  
 
