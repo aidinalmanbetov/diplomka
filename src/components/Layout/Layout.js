@@ -8,6 +8,7 @@ import NavToggle from "../NavToggle/NavToggle";
 import { useState } from "react";
 import Footer from "../Footer/Footer";
 import Search from "../Search/Search";
+import CategoryList from "../CategoryList/CategoryList";
 
 export default function Layout(props) {
   const [drawerOpen, setDrawerOpen] = useState(false);
