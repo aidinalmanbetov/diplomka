@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import "./AddProduct.css";
 import { AppContext } from "../../App";
 import { productsCollection, uploadProductPhoto } from "../../firebase";
 import { addDoc } from "firebase/firestore";
@@ -21,19 +22,19 @@ export default function AddProduct({ category }) {
   function onChangePrice(event) {
     setPrice(event.target.value);
   }
-  function onChangeDescription(event) {
-    setDescription(event.target.value);
-  }
   function onChangePicture(event) {
     const file = event.target.files[0];
     setPicture(file);
+  }
+  function onChangeDescription(event) {
+    setDescription(event.target.value);
   }
 
   function onFormSubmit(event) {
     event.preventDefault();
 
     if (!picture) {
-      alert("Please upload an image");
+      alert("Please upload an picture");
       return;
     }
 
@@ -43,17 +44,17 @@ export default function AddProduct({ category }) {
         addDoc(productsCollection, {
           category: category.id,
           name: name,
-          price: price,
-          description: description,
+          price: Number(price),
           picture: pictureUrl,
+          description: description,
           slug: name.replaceAll(" ", "-").toLowerCase(),
         })
       )
       .then(() => {
         setName("");
-        setPrice("");
-        setDescription("");
+        setPrice(0.0);
         setPicture(null);
+        setDescription("");
       })
       .catch((error) => {
         console.log("Failed to add product:", error);
@@ -78,22 +79,12 @@ export default function AddProduct({ category }) {
           />
         </label>
         <label>
-          Description:
-          <input
-            type="text"
-            value={description}
-            name="price"
-            onChange={onChangeDescription}
-            min={0}
-            required
-          />
-        </label>
-        <label>
           Price:
           <input
             type="number"
             value={price}
             name="price"
+            step="any"
             onChange={onChangePrice}
             min={0}
             required
@@ -108,9 +99,17 @@ export default function AddProduct({ category }) {
             required
           />
         </label>
-        <button type="submit" disabled={isSubmitting}>
-          {isSubmitting ? "Submitting..." : "Submit"}
-        </button>
+        <label>
+          Description:
+          <textarea
+            type=""
+            name="description"
+            value={description}
+            onChange={onChangeDescription}
+            required
+          />
+        </label>
+        <button type="submit" disabled={isSubmitting}>{isSubmitting ? "Submitting..." : "Submit"}</button>
       </form>
     </div>
   );
