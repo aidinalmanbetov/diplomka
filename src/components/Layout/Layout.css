@@ -1,4 +1,4 @@
-.Layout {
+.layout {
   display: grid;
   grid-template-areas:
     "header header"
@@ -8,6 +8,7 @@
   max-width: 1320px;
   margin: 0 auto;
 }
+
 
 @media (max-width: 550px) {
   .Layout {
