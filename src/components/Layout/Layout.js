@@ -32,7 +32,7 @@ export default function Layout(props) {
       </header>
       <main>{props.children}</main>
       <aside>
-        <CategoryList className = "categories" />
+        <CategoryList />
       </aside>
       <footer>
         <Footer />
