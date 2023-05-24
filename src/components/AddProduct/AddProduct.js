@@ -1,5 +1,4 @@
 import { useContext, useState } from "react";
-import "./AddProduct.css";
 import { AppContext } from "../../App";
 import { productsCollection, uploadProductPhoto } from "../../firebase";
 import { addDoc } from "firebase/firestore";
