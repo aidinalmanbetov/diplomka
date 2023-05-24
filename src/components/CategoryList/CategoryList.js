@@ -20,7 +20,7 @@ export default function CategoryList() {
     <div className="CategoryList">
       <h3>Choose yours for any weather</h3>
       <ul>
-        {output} <AddCategory />
+        <AddCategory /> {output}
       </ul>
     </div>
   );
