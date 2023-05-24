@@ -4,4 +4,4 @@ export default function Contacts() {
   return (
     <MainContacts/>
   )
-}
+}  
