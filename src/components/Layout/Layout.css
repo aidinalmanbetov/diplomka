@@ -22,23 +22,32 @@
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
-  box-shadow: 1px 91px 33px -53px #fff inset;    
+  box-shadow: 1px 91px 33px -53px #fff inset;
 }
+
 .Layout aside {
   margin-top: 15px;
   margin-left: 15px;
   grid-area: aside;
+  display: flex;
+  justify-content: center; /* Выравнивание по центру */
 }
+
+.CategoryList-wrapper {
+  max-width: 200px; /* Желаемая ширина CategoryList */
+}
+
 .Layout main {
   grid-area: main;
   padding: 30px;
   min-height: 99vh;
 }
+
 .Layout footer {
   grid-area: footer;
   background-color: rgb(0, 0, 0);
   margin-top: 30px;
-  padding: 10px 30px; 
+  padding: 10px 30px;
 }
 
 @media (max-width: 596px) {
@@ -51,4 +60,3 @@
   display: flex;
   flex-wrap: wrap;
 }
-
