@@ -33,6 +33,7 @@ export default function Layout(props) {
       <main>{props.children}</main>
       <aside>
         <div className="CategoryList-wrapper">
+          <div className="MainContent">{props.children}</div>
           <CategoryList />
         </div>
       </aside>

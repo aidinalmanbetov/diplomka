@@ -29,12 +29,16 @@
   margin-top: 15px;
   margin-left: 15px;
   grid-area: aside;
-  display: flex;
-  justify-content: center; /* Выравнивание по центру */
 }
 
 .CategoryList-wrapper {
-  max-width: 200px; /* Желаемая ширина CategoryList */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.MainContent {
+  flex: 1;
 }
 
 .Layout main {
