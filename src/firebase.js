@@ -15,13 +15,13 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBksJlRvPL_2C8VIVlkmWbQGXCReV8wB1o",
-  authDomain: "diplom-1-b6b30.firebaseapp.com",
-  databaseURL: "https://diplom-1-b6b30-default-rtdb.firebaseio.com",
-  projectId: "diplom-1-b6b30",
-  storageBucket: "diplom-1-b6b30.appspot.com",
-  messagingSenderId: "62749632246",
-  appId: "1:62749632246:web:a591d53be89e0675c9aed7",
+  apiKey: "AIzaSyAlESKmJa68Cc8jFH0I3bap3B9HrXNyQ4o",
+  authDomain: "diploma-123-afb8f.firebaseapp.com",
+  projectId: "diploma-123-afb8f",
+  storageBucket: "diploma-123-afb8f.appspot.com",
+  messagingSenderId: "508678302995",
+  appId: "1:508678302995:web:5ff8bef5d81defad89bee6",
+  measurementId: "G-3CG33M7ZFW"
 };
 
 // Initialize Firebase
