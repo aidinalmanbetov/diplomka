@@ -1,6 +1,5 @@
 import Nav from "../Nav/Nav";
 import "./Layout.css";
-import CategoryList from "../CategoryList/CategoryList";
 import Logo from "./Logo/Logo";
 import CartLink from "../CartLink/CartLink";
 import Auth from "../Auth/Auth";
@@ -8,8 +7,7 @@ import Drawer from "../Drawer/Drawer";
 import NavToggle from "../NavToggle/NavToggle";
 import { useState } from "react";
 import Footer from "../Footer/Footer";
-import Search from "../Search/Search";      
-
+import Search from "../Search/Search";
 
 export default function Layout(props) {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -17,6 +15,7 @@ export default function Layout(props) {
   function toggleDrawer() {
     setDrawerOpen(!drawerOpen);
   }
+
   return (
     <div className="Layout">
       <header>
@@ -30,11 +29,13 @@ export default function Layout(props) {
         </div>
         <Auth />
       </header>
+      <main>{props.children}</main>
       <aside>
         <CategoryList />
       </aside>
-      <main>{props.children}</main>
-      <footer><Footer /></footer>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
