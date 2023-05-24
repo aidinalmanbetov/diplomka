@@ -1,0 +1,23 @@
+.MainContacts img {
+  width: 30px;
+}
+.Tel {
+  text-decoration: none;
+  color: black;
+  padding: 7px 0;
+}
+.Tel:hover {
+  color: rgb(168 87 56);
+}
+.directions-to-administrator a {
+  display: block;
+}
+.MainContacts .social-network svg {
+  transition: 0.9s;
+}
+.MainContacts .social-network svg:hover {
+  fill: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  overflow: hidden;
+}
