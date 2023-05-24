@@ -3,10 +3,16 @@
   grid-template-areas:
     "header header"
     "aside main"
+    "categories categories" /* Добавлено */
     "footer footer";
   grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto auto 1fr auto; /* Обновлено */
   max-width: 1320px;
   margin: 0 auto;
+}
+
+.categories {
+  grid-area: categories;
 }
 
 @media (max-width: 550px) {
