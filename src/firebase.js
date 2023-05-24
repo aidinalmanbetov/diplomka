@@ -1,3 +1,4 @@
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, onSnapshot } from "firebase/firestore";
@@ -15,13 +16,13 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAlESKmJa68Cc8jFH0I3bap3B9HrXNyQ4o",
-  authDomain: "diploma-123-afb8f.firebaseapp.com",
-  projectId: "diploma-123-afb8f",
-  storageBucket: "diploma-123-afb8f.appspot.com",
-  messagingSenderId: "508678302995",
-  appId: "1:508678302995:web:5ff8bef5d81defad89bee6",
-  measurementId: "G-3CG33M7ZFW"
+  apiKey: "AIzaSyB8mxiVTBZpIb7rSGGrXn5jJjQYxdo42NA",
+  authDomain: "dip123-b6e42.firebaseapp.com",
+  projectId: "dip123-b6e42",
+  storageBucket: "dip123-b6e42.appspot.com",
+  messagingSenderId: "1069194147793",
+  appId: "1:1069194147793:web:8f604b8852eb270737d2f0",
+  measurementId: "G-GZV2NM6FJH"
 };
 
 // Initialize Firebase
