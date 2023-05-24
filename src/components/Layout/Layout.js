@@ -30,12 +30,10 @@ export default function Layout(props) {
         </div>
         <Auth />
       </header>
-      <div className="Layout-container">
-        <aside className="Layout-aside">
-          <CategoryList className="categories" />
-        </aside>
-        <main className="Layout-main">{props.children}</main>
-      </div>
+      <main>{props.children}</main>
+      <aside>
+        <CategoryList />
+      </aside>
       <footer>
         <Footer />
       </footer>
