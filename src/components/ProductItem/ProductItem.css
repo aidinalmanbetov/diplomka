@@ -6,7 +6,7 @@
 .ProductItem .Product {
   display: flex;
   flex-direction: row-reverse;
-  border: 2px solid;
+  border: 2px solid #222;
   background-color: #bcbcbc;
   color: #ffffff;
   width: 500px;
