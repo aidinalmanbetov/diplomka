@@ -19,9 +19,8 @@ export default function CategoryList() {
   return (
     <div className="CategoryList">
       <h3>Choose yours for any weather</h3>
-      <ul>
-        <AddCategory /> {output}
-      </ul>
+      <ul>{output}</ul>
+      <AddCategory />
     </div>
   );
 }

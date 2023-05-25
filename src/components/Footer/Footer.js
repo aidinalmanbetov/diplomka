@@ -2,6 +2,9 @@ import { NavLink } from "react-router-dom";
 import "./Footer.css";
 
 function Footer() {
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
   return (
     <footer className="footer">
@@ -10,7 +13,7 @@ function Footer() {
           <h4 className="footer-heading">Menus</h4>
           <ul className="footer-list">
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/" onClick={scrollToTop}>Home</NavLink>
             </li>
             <li>
               <NavLink to="/about">About</NavLink>
@@ -113,3 +116,4 @@ function Footer() {
 }
 
 export default Footer;
+
