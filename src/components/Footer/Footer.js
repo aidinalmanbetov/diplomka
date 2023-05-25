@@ -19,7 +19,7 @@ function Footer() {
               <NavLink to="/about " onClick={scrollToTop}>About</NavLink>
             </li>
             <li>
-              <NavLink to="/contact" onClick={scrollToTop}>Contact</NavLink>
+              <NavLink to="/contacts" onClick={scrollToTop}>Contact</NavLink>
             </li>
             <li>
               <NavLink to="/delivery"onClick={scrollToTop}>Deliver</NavLink>
