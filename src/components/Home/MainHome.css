@@ -9,7 +9,8 @@
   background-color: #bcbcbc;
   position: relative;
 }
- .Home::after{
+
+.Home::after {
   content: "All the best for you";
   position: absolute;
   top: 100px;
@@ -17,10 +18,11 @@
   width: 300px;
   font-size: 40px;
   font-weight: 600;
-  color:#bcbcbc;
- }
+  color: #bcbcbc;
+  white-space: nowrap; /* Добавлено */
+}
 
- .Home::before{
+.Home::before {
   content: "at low prices";
   position: absolute;
   top: 210px;
@@ -28,25 +30,24 @@
   width: 300px;
   font-size: 15px;
   font-weight: 500;
-  color:#bcbcbc;
- }
- 
-
+  color: #bcbcbc;
+  white-space: nowrap; /* Добавлено */
+}
 
 @media (max-width: 800px) {
-  .header-text .header-title {
-    font-size: 1.8rem;
+  .Home::after {
+    font-size: 30px; /* Уменьшен размер шрифта */
   }
-  .header-text .header-subtitle {
-    font-size: 1.1rem;
+  .Home::before {
+    font-size: 12px; /* Уменьшен размер шрифта */
   }
 }
+
 @media (max-width: 670px) {
-  .header-text .header-title {
-    font-size: 1.1rem;
+  .Home::after {
+    font-size: 20px; /* Дальнейшее уменьшение размера шрифта */
   }
-  .header-text .header-subtitle {
-    font-size: 0.5rem;
+  .Home::before {
+    font-size: 10px; /* Дальнейшее уменьшение размера шрифта */
   }
 }
- 
