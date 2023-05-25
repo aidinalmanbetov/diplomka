@@ -17,5 +17,5 @@ export default function MainDelivery() {
       </p>
       <img src={Delivery} alt="Delivery_photo" />
     </div>
-  );
+  );  
 }

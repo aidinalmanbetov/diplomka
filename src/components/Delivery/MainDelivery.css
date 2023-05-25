@@ -1,0 +1,26 @@
+.Delivery {
+  text-align: center;
+  padding: 40px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Delivery h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+
+
+.Delivery p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.Delivery img {
+  max-width: 100%;
+  height: auto;
+}
