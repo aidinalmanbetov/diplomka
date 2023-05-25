@@ -25,7 +25,7 @@ function Footer() {
               <NavLink to="/deliver"onClick={scrollToTop}>Deliver</NavLink>
             </li>
             <li>
-              <NavLink to="/orders">Orders</NavLink>
+              <NavLink to="/orders"onClick={scrollToTop}>Orders</NavLink>
             </li>
           </ul>
         </div>
