@@ -1,87 +1,42 @@
 .CategoryList {
-  width: 100%;
+  overflow: hidden;
+  width: 200px;
   border-radius: 20px;
-  background-color: #f5f5f5;
-  padding: 20px;
-}
-
-.CategoryList h3 {
-  color: #333;
-  margin: 0;
-  text-align: center;
-  font-weight: 600;
-  margin-bottom: 20px;
 }
 
 .CategoryList ul {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  padding: 0;
+
+  margin-top: 0;
+  overflow: hidden;
 }
 
 .CategoryList li {
-  flex: 0 0 calc(33.33% - 10px);
-  margin-bottom: 10px;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
 }
-
 
 .CategoryList li a {
   color: #222;
   text-decoration: none;
+  padding: 10px 10px;
   font-size: 15px;
   font-weight: 600;
-  transition: color 0.3s, transform 0.3s;
+  border: 1px solid transparent; /* Добавлено */
+  transition: 500ms ease, transform 500ms ease; /* Добавлено */
 }
 
 .CategoryList li a:hover {
-  color: #000;
+  color: rgb(0, 0, 0);
   transform: scale(1.05);
 }
 
-.Layout {
-  display: grid;
-  grid-template-areas:
-    "header header"
-    "aside main"
-    "footer footer";
-  grid-template-columns: 1fr 4fr;
-  max-width: 1320px;
-  margin: 0 auto;
-}
+.CategoryList h3 {
+  color: #222;
+  margin: 0;
+  text-align: center;
 
-.Layout header {
-  padding: 0 10px;
-  grid-area: header;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: center;
-  box-shadow: 1px 91px 33px -53px #fff inset;
-}
+  font-weight: 600;
 
-.Layout aside {
-  margin-top: 15px;
-  margin-left: 15px;
-  grid-area: aside;
-}
-
-.MainContent {
-  flex: 1;
-}
-
-.Layout main {
-  grid-area: main;
-  padding: 30px;
-  min-height: 99vh;
-}
-
-.Layout footer {
-  grid-area: footer;
-  background-color: #bcbcbc;
-  margin-top: 30px;
-  padding: 10px 30px;
 }
