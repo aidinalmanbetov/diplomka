@@ -6,8 +6,8 @@
 .ProductItem .Product {
   display: flex;
   flex-direction: row-reverse;
-  border: 2px solid #9b7b35;
-  background-color: rgb(168, 88, 56);
+  border: 2px solid;
+  background-color: #bcbcbc;
   color: #ffffff;
   width: 500px;
   border-radius: 10px;
