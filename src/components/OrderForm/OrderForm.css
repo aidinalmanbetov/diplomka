@@ -6,7 +6,7 @@
   width: 200px;
   padding: 0 200px ;
   margin-bottom: 15px;
-  align-content: center;
+
 }
 @media (max-width: 596px) {
   .OrderForm {
