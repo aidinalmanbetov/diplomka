@@ -1,31 +1,24 @@
-import { collection, getFirestore, onSnapshot } from "firebase/firestore";
-import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import {
-  GoogleAuthProvider,
-  getAuth,
-  onAuthStateChanged,
-  signInWithPopup,
-  signOut,
-} from "firebase/auth";
+import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDC31N0QjkwHwvPXf737qNSw7D7ycWmyQs",
-  authDomain: "diplom-338a3.firebaseapp.com",
-  projectId: "diplom-338a3",
-  storageBucket: "diplom-338a3.appspot.com",
-  messagingSenderId: "213558855827",
-  appId: "1:213558855827:web:f772284e3caa70e540a566",
+  apiKey: "AIzaSyB8mxiVTBZpIb7rSGGrXn5jJjQYxdo42NA",
+  authDomain: "dip123-b6e42.firebaseapp.com",
+  projectId: "dip123-b6e42",
+  storageBucket: "dip123-b6e42.appspot.com",
+  messagingSenderId: "1069194147793",
+  appId: "1:1069194147793:web:8f604b8852eb270737d2f0",
+  measurementId: "G-GZV2NM6FJH"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
-const auth = getAuth(app);
+const analytics = getAnalytics(app);
 
 // Получение списка категорий (коллекции документов)
 export const categoryCollection = collection(db, "categories");
