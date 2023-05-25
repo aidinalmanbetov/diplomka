@@ -16,13 +16,13 @@ function Footer() {
               <NavLink to="/" onClick={scrollToTop}>Home</NavLink>
             </li>
             <li>
-              <NavLink to="/about">About</NavLink>
+              <NavLink to="/about " onClick={scrollToTop}>About</NavLink>
             </li>
             <li>
-              <NavLink to="/contact">Contact</NavLink>
+              <NavLink to="/contact" onClick={scrollToTop}>Contact</NavLink>
             </li>
             <li>
-              <NavLink to="/deliver">Deliver</NavLink>
+              <NavLink to="/deliver"onClick={scrollToTop}>Deliver</NavLink>
             </li>
             <li>
               <NavLink to="/orders">Orders</NavLink>
