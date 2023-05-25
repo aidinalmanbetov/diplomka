@@ -1,38 +1,36 @@
+import { collection, getFirestore, onSnapshot } from "firebase/firestore";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import {
+  GoogleAuthProvider,
+  getAuth,
+  onAuthStateChanged,
+  signInWithPopup,
+  signOut,
+} from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyB8mxiVTBZpIb7rSGGrXn5jJjQYxdo42NA",
-  authDomain: "dip123-b6e42.firebaseapp.com",
-  projectId: "dip123-b6e42",
-  storageBucket: "dip123-b6e42.appspot.com",
-  messagingSenderId: "1069194147793",
-  appId: "1:1069194147793:web:8f604b8852eb270737d2f0",
-  measurementId: "G-GZV2NM6FJH"
+  apiKey: "AIzaSyDC31N0QjkwHwvPXf737qNSw7D7ycWmyQs",
+  authDomain: "diplom-338a3.firebaseapp.com",
+  projectId: "diplom-338a3",
+  storageBucket: "diplom-338a3.appspot.com",
+  messagingSenderId: "213558855827",
+  appId: "1:213558855827:web:f772284e3caa70e540a566",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
-
-
 export const db = getFirestore(app);
+const auth = getAuth(app);
 
-export const storage = getStorage(app);
-
+// Получение списка категорий (коллекции документов)
 export const categoryCollection = collection(db, "categories");
-
 export const productsCollection = collection(db, "products");
-
 export const ordersCollection = collection(db, "orders");
-
-
 const provider = new GoogleAuthProvider();
 export const logIn = () => signInWithPopup(auth, provider);
 export const logOut = () => signOut(auth);
@@ -47,6 +45,7 @@ export const onCategoriesLoad = (callback) =>
       }))
     )
   );
+
 export const onProductsLoad = (callback) =>
   onSnapshot(productsCollection, (snapshot) =>
     callback(
@@ -57,7 +56,7 @@ export const onProductsLoad = (callback) =>
     )
   );
 
-export const onOrdersLoad = (callback) =>
+export const onOredrsLoad = (callback) =>
   onSnapshot(ordersCollection, (snapshot) =>
     callback(
       snapshot.docs.map((doc) => ({
@@ -67,14 +66,11 @@ export const onOrdersLoad = (callback) =>
     )
   );
 
-// отправка фотографии и получение ее url
-export const uploadProductPhoto = (file) => {
+export const uploadProductPhoto = async (file) => {
   const storageRef = ref(storage, `products/${file.name}`);
-  return uploadBytes(storageRef, file)
-    .then(() => {
-      return getDownloadURL(storageRef);
-    })
-    .catch((error) => {
-      console.log("Failed to upload product photo:", error);
-    });
+  await uploadBytes(storageRef, file);
+
+  const url = await getDownloadURL(storageRef);
+  return url;
 };
+export const storage = getStorage(app);
