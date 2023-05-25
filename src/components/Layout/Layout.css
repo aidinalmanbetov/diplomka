@@ -49,11 +49,14 @@
 
 .Layout footer {
   grid-area: footer;
-  background-color: #bcbcbc;
+  background: linear-gradient( #bcbcbc, #222);
   margin-top: 30px;
   padding: 10px 30px;
 }
 
+.Layout footer:hover{
+  background-color: #222;
+}
 @media (max-width: 596px) {
   .Layout header > .Nav {
     display: none;
