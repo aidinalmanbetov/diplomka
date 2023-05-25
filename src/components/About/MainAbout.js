@@ -1,3 +1,4 @@
+import React from "react";
 import "./MainAbout.css";
 
 export default function MainAbout() {
@@ -19,15 +20,17 @@ export default function MainAbout() {
         </p>
       </div>
       <div className="YouTubeVideo">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/VIDEO_ID"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+        <div className="YouTubeVideoWrapper">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/VIDEO_ID"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
       </div>
       <div className="gift">Thanks for choosing us</div>
     </div>
