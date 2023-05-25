@@ -49,7 +49,7 @@
 
 .Layout footer {
   grid-area: footer;
-  background-color: #666;
+  background-color: #bcbcbc;
   margin-top: 30px;
   padding: 10px 30px;
 }

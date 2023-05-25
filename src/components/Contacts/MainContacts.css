@@ -1,3 +1,9 @@
+.MainContacts{
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+} 
+
 .MainContacts img {
   width: 30px;
 }
@@ -7,7 +13,7 @@
   padding: 7px 0;
 }
 .Tel:hover {
-  color: rgb(168 87 56);
+  color: #555;
 }
 .directions-to-administrator a {
   display: block;
