@@ -29,6 +29,7 @@ export default function MainAbout() {
           allowfullscreen
         ></iframe>
       </div>
+      <div className="gift">Thanks for choosing us</div>
     </div>
   );
 }
